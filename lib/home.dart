@@ -42,7 +42,7 @@ class _SocietyListState extends State<SocietyList> {
       "location": "Kasai Pantan NY, 12483",
       "type": "Lower Secondary School",
       "logoText":
-      "https://cdn.pixabay.com/photo/2017/01/13/01/22/rocket-1976107_960_720.png"
+      "https://cdn.pixabay.com/p017/01/13/01/22/rocket-1976107_960_720.png"
     },
     {
       "name": "Fredik Panlon",
@@ -115,7 +115,7 @@ class _SocietyListState extends State<SocietyList> {
                         ),
                       ),
                       Text(
-                        "Institutes",
+                        "Sustainable Societies",
                         style: TextStyle(color: Colors.white, fontSize: 24),
                       ),
                       IconButton(
@@ -171,86 +171,85 @@ class _SocietyListState extends State<SocietyList> {
       ),
     );
   }
-
-  Widget buildList(BuildContext context, int index) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(25),
-        color: Colors.white,
-      ),
-      width: double.infinity,
-      height: 110,
-      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            width: 50,
-            height: 50,
-            margin: EdgeInsets.only(right: 15),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-              border: Border.all(width: 3, color: secondary),
-              image: DecorationImage(
-                  image: NetworkImage(SocietyList[index]['logoText']),
-                  fit: BoxFit.fill),
-            ),
-          ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(
-                  SocietyList[index]['name'],
-                  style: TextStyle(
-                      color: primary,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18),
-                ),
-                SizedBox(
-                  height: 6,
-                ),
-                Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.location_on,
-                      color: secondary,
-                      size: 20,
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Text(SocietyList[index]['location'],
-                        style: TextStyle(
-                            color: primary, fontSize: 13, letterSpacing: .3)),
-                  ],
-                ),
-                SizedBox(
-                  height: 6,
-                ),
-                Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.school,
-                      color: secondary,
-                      size: 20,
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Text(SocietyList[index]['type'],
-                        style: TextStyle(
-                            color: primary, fontSize: 13, letterSpacing: .3)),
-                  ],
-                ),
-              ],
-            ),
-          )
-        ],
-      ),
-    );
-  }
+  // Widget buildList(BuildContext context, int index) {
+  //   return Container(
+  //     decoration: BoxDecoration(
+  //       borderRadius: BorderRadius.circular(25),
+  //       color: Colors.white,
+  //     ),
+  //     width: double.infinity,
+  //     height: 110,
+  //     margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+  //     padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+  //     child: Row(
+  //       crossAxisAlignment: CrossAxisAlignment.start,
+  //       children: <Widget>[
+  //         Container(
+  //           width: 50,
+  //           height: 50,
+  //           margin: EdgeInsets.only(right: 15),
+  //           decoration: BoxDecoration(
+  //             borderRadius: BorderRadius.circular(50),
+  //             border: Border.all(width: 3, color: secondary),
+  //             image: DecorationImage(
+  //                 image: NetworkImage(SocietyList[index]['logoText']),
+  //                 fit: BoxFit.fill),
+  //           ),
+  //         ),
+  //         Expanded(
+  //           child: Column(
+  //             crossAxisAlignment: CrossAxisAlignment.start,
+  //             children: <Widget>[
+  //               Text(
+  //                 SocietyList[index]['name'],
+  //                 style: TextStyle(
+  //                     color: primary,
+  //                     fontWeight: FontWeight.bold,
+  //                     fontSize: 18),
+  //               ),
+  //               SizedBox(
+  //                 height: 6,
+  //               ),
+  //               Row(
+  //                 children: <Widget>[
+  //                   Icon(
+  //                     Icons.location_on,
+  //                     color: secondary,
+  //                     size: 20,
+  //                   ),
+  //                   SizedBox(
+  //                     width: 5,
+  //                   ),
+  //                   Text(SocietyList[index]['location'],
+  //                       style: TextStyle(
+  //                           color: primary, fontSize: 13, letterSpacing: .3)),
+  //                 ],
+  //               ),
+  //               SizedBox(
+  //                 height: 6,
+  //               ),
+  //               Row(
+  //                 children: <Widget>[
+  //                   Icon(
+  //                     Icons.school,
+  //                     color: secondary,
+  //                     size: 20,
+  //                   ),
+  //                   SizedBox(
+  //                     width: 5,
+  //                   ),
+  //                   Text(SocietyList[index]['type'],
+  //                       style: TextStyle(
+  //                           color: primary, fontSize: 13, letterSpacing: .3)),
+  //                 ],
+  //               ),
+  //             ],
+  //           ),
+  //         )
+  //       ],
+  //     ),
+  //   );
+  // }
 
   Widget _buildSociety(BuildContext context, int index) {
     var society = SocietyList[index % SocietyList.length];

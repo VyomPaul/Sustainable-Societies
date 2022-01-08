@@ -17,7 +17,8 @@ class _BoardingScreenState extends State<BoardingPage> {
   List<Slide> _slides = [];
   PageController _pageController = PageController();
 
-  @override
+
+
   void initState() {
     _currentPage = 0;
     _slides = [
@@ -126,9 +127,12 @@ class _BoardingScreenState extends State<BoardingPage> {
                   child: SizedBox(
                       width: double.infinity,
                       child: GradientButton(
-                        callback: () => {},
+                        callback: () => {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => const SignUpScreen()))
+                        },
                         gradient: LinearGradient(colors: [
-                          Color.fromRGBO(11, 198, 200, 1),
+                          Color.fromRGBO(11, 198, 200, 1.0),
                           Color.fromRGBO(68, 183, 183, 1)
                         ]),
                         elevation: 0,
@@ -147,7 +151,7 @@ class _BoardingScreenState extends State<BoardingPage> {
                           ),
                         ),
                       )),
-                ),
+                  ),
                 SizedBox(
                   height: 10,
                 ),
